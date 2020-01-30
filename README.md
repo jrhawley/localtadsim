@@ -2,6 +2,15 @@
 
 This repo contains the Go source code to run the method described in "Quantifying the similarity of topological domains across normal and cancer human cell types" (Sauerwald and Kingsford), as well as a Python script to reproduce all statistics and figures used in the paper.
 
+## Installation
+
+```shell
+git clone https://github.com/jrhawley/localtadsim.git
+cd localtadsim/go
+export GOPATH=$(pwd)
+go build localdiff
+go build localdiff_vitest
+```
 
 ## Usage
 
@@ -39,7 +48,7 @@ In addition, in this case the filenames input to `-tad` should be filepaths to w
 For example, `-tad=armatusresults/A549/100kb/EncodeChr18_A549_combo_IC_100kb_gmax1.0,armatusresults/K562/100kb/RaoChr18_KBM7_IC_100kb_gmax1.0`, where we get:
 
 ```shell
-$ tree armatusresults/A549/100kb/EncodeChr18_A549_combo_IC_100kb_gmax1.0*
+$ ls armatusresults/A549/100kb/EncodeChr18_A549_combo_IC_100kb_gmax1.0*
 armatusresults/A549/100kb/EncodeChr22_A549_combo_IC_100kb_gmax1.0.consensus.txt
 armatusresults/A549/100kb/EncodeChr22_A549_combo_IC_100kb_gmax1.0.gamma.0.0.txt
 armatusresults/A549/100kb/EncodeChr22_A549_combo_IC_100kb_gmax1.0.gamma.0.1.0.txt
